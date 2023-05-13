@@ -22,6 +22,10 @@
     0 0 9px 3px rgba(27, 253, 156, 0.1);
 
   margin-top: 50px;
+  display: inline-block;
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 6s; /* don't forget to set a duration! */
 }
 
 .hire-me:hover {

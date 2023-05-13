@@ -7,3 +7,8 @@ document.querySelector(".contact-btn").addEventListener("click", () => {
   document.querySelector("#header").style.display = "none";
   document.querySelector("#contact").style.overflow = "visible";
 });
+
+document.querySelector(".resume-btn").addEventListener("click", () => {
+  document.querySelector("#header").style.display = "none";
+  document.querySelector("#resume").style.overflow = "visible";
+});
