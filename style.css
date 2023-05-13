@@ -51,6 +51,89 @@ h6 {
   text-decoration: none;
 }
 
+/* PreLoader Section ======================================================================================================================*/
+body {
+  background: black;
+}
+.loading {
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  text-transform: uppercase;
+
+  width: 150px;
+  text-align: center;
+  line-height: 50px;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+.loading span {
+  position: relative;
+  z-index: 999;
+  color: #fff;
+}
+.loading:before {
+  content: "";
+  background: none;
+  width: 128px;
+  height: 36px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid #18d26e;
+
+  animation: 2s loadingBefore infinite ease-in-out;
+}
+
+@keyframes loadingBefore {
+  0% {
+    transform: translateX(-14px);
+  }
+  50% {
+    transform: translateX(14px);
+  }
+  100% {
+    transform: translateX(-14px);
+  }
+}
+
+.loading:after {
+  content: "";
+  background: #18d26e;
+  width: 14px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0.5;
+
+  animation: 2s loadingAfter infinite ease-in-out;
+}
+
+@keyframes loadingAfter {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
 /* header =================================================================================================================================*/
 
 #header {
@@ -121,6 +204,12 @@ h6 {
 
 #header .social-links a:hover {
   background: #18d26e;
+  /* margin-top: 50px; */
+  /* display: inline-block; */
+
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 6s; /* don't forget to set a duration! */
+  animation-iteration-count: infinite;
 }
 
 @media (max-width: 992px) {
@@ -191,7 +280,7 @@ section {
   top: 140px;
   bottom: 100%;
   opacity: 1;
-  transition: ease-in-out 0.4s;
+  transition: all 300ms ease-in-out;
   z-index: 2;
 }
 

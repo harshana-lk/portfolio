@@ -26,6 +26,7 @@
 
   animation: bounce; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 6s; /* don't forget to set a duration! */
+  animation-iteration-count: infinite;
 }
 
 .hire-me:hover {
