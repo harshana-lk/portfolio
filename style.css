@@ -432,7 +432,7 @@ section .container {
 }
 
 .navbar-mobile {
-  position: fixed;
+  position: fixed !important;
   overflow: hidden;
   top: 0;
   right: 0;
